@@ -37,6 +37,10 @@ ul li a {
     text-decoration: none;
     font-size: 18px;
     margin-inline: 22px;
+    transition: all 1s ease;
+}
+ul li a:hover{
+    color: rgb(212, 109, 35);
 }
 .searchBar{
     display: flex;
@@ -105,11 +109,13 @@ ul li a {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 }
 .womens{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 }
 .card{
     width: 300px;
@@ -150,6 +156,7 @@ ul li a {
    display: flex;
    justify-content: center;
    align-items: center;
+   flex-wrap: wrap;
 }
 .blogs .blogCard{
     width: 300px;
@@ -175,14 +182,161 @@ ul li a {
   position: relative;
   top: 11px;
 }
+/* ==== card details ==== */
+.hideCard {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+}
+.cardDetails {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 90%;
+  display: flex;
+  gap: 20px;
+}
+
+.cardDetails h2{
+    margin-top: 22px;
+}
+.cardDetails p{
+    margin-top: 22px;
+}
+.cardDetails button{
+    margin-top: 22px;
+    width: 120px;
+    height: 35px;
+    background-color: orange;
+    color: white;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+}
+.cardDetails a{
+    padding: 7px 22px;
+    background-color: orangered;
+    color: white;
+    text-decoration: none;
+}
+.cardDetails img{
+    width: 500px;
+    height: 500px;
+}
 footer{
     display: flex;
     justify-content: space-around;
     align-items: center;
+    flex-wrap: wrap;
     padding: 66px;
     margin-top: 66px;
     background-color: rgb(241, 162, 106);
 }
 footer p{
     margin-top: 12px;
+}
+
+/* --- responsive navbar --- */
+#menuIcon {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+/* tablet view */
+@media screen and (max-width: 900px) {
+    .main{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        width: 100%;
+        padding-bottom: 20px;
+    }
+    .mainText h1{
+    font-size: 40px;
+}
+
+.mainText button {
+    margin-top: 22px;
+    width: 110px;
+    height: 30px;
+}
+.head{
+    padding: 45px;
+}
+.card img{
+    margin-top: 20px;
+}
+.card p{
+    padding: 2px;
+    font-size: 13px;
+    font-weight: 500;
+}
+.slide{
+    width: 90%;
+}
+.slideCard img{
+    width: 20%;
+}
+}
+
+/* mobile view */
+@media screen and (max-width: 600px) {
+    
+  nav {
+    justify-content: space-between;
+    padding: 10px 20px;
+  }
+
+  .logo ul, .searchBar, .icons i {
+    display: none;
+  }
+
+  #menuIcon {
+    display: block;
+  }
+    .mainText h1{
+    font-size: 28px;
+    padding: 10px;
+}
+.mainText p{
+    width: 300px;
+    font-size: 13px;
+}
+.mainText button {
+    margin-top: 22px;
+    width: 90px;
+    height: 30px;
+}
+.head{
+    padding: 40px;
+} 
+.card p{
+    display: inline;
+    margin-inline: 28px;
+    font-size: 12.5px;
+}
+.slide{
+    height: 230px;
+}
+.slideCard img{
+    height: 160px;
+    margin-inline: 4px;
+} 
+footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+.text h2{
+    margin-top: 22px;
+}
 }

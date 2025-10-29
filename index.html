@@ -14,26 +14,28 @@
     <div class="container">
       <!--  nav bar -->
       <nav>
-        <div class="logo">
-          <img src="logo/logo.png" alt="" />
-          <ul>
-            <li><a href="#">MEN</a></li>
-            <li><a href="#">WOMEN</a></li>
-            <li><a href="#">TRENDS</a></li>
-            <li><a href="#">BLOGS</a></li>
-          </ul>
-        </div>
+  <div class="logo">
+    <img src="logo/logo.png" alt="" />
+    <ul class="mobileMenu">
+      <li><a href="#men">MEN</a></li>
+      <li><a href="#women">WOMEN</a></li>
+      <li><a href="#trends">TRENDS</a></li>
+      <li><a href="#blogs">BLOGS</a></li>
+    </ul>
+  </div>
 
-        <div class="searchBar">
-          <input type="text" placeholder="search products & more..." />
-          <i class="fa-solid fa-magnifying-glass"></i>
-        </div>
+  <div class="searchBar">
+    <input type="text" placeholder="search products & more..." />
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </div>
 
-        <div class="icons">
-          <i class="fa-solid fa-user"></i>
-          <i class="fa-solid fa-bag-shopping"></i>
-        </div>
-      </nav>
+  <div class="icons">
+    <i class="fa-solid fa-user"></i>
+    <i class="fa-solid fa-bag-shopping"></i>
+    <i id="menuIcon" class="fa-solid fa-bars menuIcon"></i>
+  </div>
+</nav>
+
       <!-- main page -->
       <div class="main">
         <img src="images/main.png" alt="" />
@@ -183,6 +185,25 @@
         </div>
       </footer>
     </div>
+
+    <!-- card details -->
+    <div class="hideCard">
+      <div class="cardDetails">
+        <img src="images/wom1.webp" alt="" />
+        <div class="cardText">
+          <h2>Top Trending Wear</h2>
+          <h2>Upto 30% off Harry...</h2>
+          <p>Lorem ipsum dolor sit amet...</p>
+          <p>Lorem ipsum dolor sit amet...</p>
+          <p>Lorem ipsum dolor sit amet...</p>
+          <p>Lorem ipsum dolor sit amet...</p>
+          <button>Buy Now</button>
+          <button>Add To Cart</button>
+          <a href="#" class="backBtn">Back</a>
+        </div>
+      </div>
+    </div>
+
     <script src="script.js"></script>
   </body>
 </html>
