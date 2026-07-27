@@ -1,6 +1,7 @@
 # 🛍️ TrendVerse — Modern E-Commerce Store
-**TrendVerse** is a modern, clean, and fully responsive front-end e-commerce web application crafted with vanilla HTML5, CSS3, and JavaScript. Designed with contemporary UI/UX patterns, it features modern glassmorphism headers, product quick-view modals, interactive cart counters, and smooth horizontal sliders.
+TrendVerse is a modern, clean, and fully responsive front-end e-commerce web application crafted with vanilla HTML5, CSS3, and JavaScript. Designed with contemporary UI/UX patterns, it features modern glassmorphism headers, product quick-view modals, interactive cart counters, and smooth horizontal sliders.
 ---
+
 ### 🖥️ Desktop Preview
 
 <img width="1363" height="445" alt="nav hero" src="https://github.com/user-attachments/assets/cdf5798b-57b4-4608-8a79-502a482bb6d0" />
@@ -9,6 +10,7 @@
 <img width="946" height="489" alt="slide" src="https://github.com/user-attachments/assets/2e0b118a-f584-4305-bae1-8352eed84b8f" />
 <img width="1340" height="513" alt="blogs" src="https://github.com/user-attachments/assets/280ac05e-8007-4d5d-9fb4-3059f90e046e" />
 ---
+
 ### 📱 Mobile & Interactive Features
 
 <img width="320" height="7420" alt="screencapture-file-E-Web-devOps-work-JS-Pratical-works-JavaScript-Projects-Ecommerce-Website-index-html-2026-07-27-18_51_32" src="https://github.com/user-attachments/assets/eebb37b2-1ebe-4cff-adac-420208a9fcc7" />
