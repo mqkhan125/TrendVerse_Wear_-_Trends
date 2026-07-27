@@ -3,206 +3,391 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TrendVerse Wear & Trends</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>TrendVerse — Modern Wear & Fashion Trends</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
+
+    <!-- Favicon & Styles -->
+    <link rel="shortcut icon" href="logo/logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="container">
-      <!--  nav bar -->
-      <nav>
-  <div class="logo">
-    <img src="logo/logo.png" alt="" />
-    <ul class="mobileMenu">
-      <li><a href="#men">MEN</a></li>
-      <li><a href="#women">WOMEN</a></li>
-      <li><a href="#trends">TRENDS</a></li>
-      <li><a href="#blogs">BLOGS</a></li>
-    </ul>
-  </div>
+    <!-- Navbar -->
+    <header class="header">
+      <nav class="navbar container">
+        <a href="#" class="logo">
+          <img src="logo/logo.png" alt="TrendVerse Logo" />
+          <span>TrendVerse</span>
+        </a>
 
-  <div class="searchBar">
-    <input type="text" placeholder="search products & more..." />
-    <i class="fa-solid fa-magnifying-glass"></i>
-  </div>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#men">Men</a></li>
+          <li><a href="#women">Women</a></li>
+          <li><a href="#trends">Trends</a></li>
+          <li><a href="#blogs">Blogs</a></li>
+        </ul>
 
-  <div class="icons">
-    <i class="fa-solid fa-user"></i>
-    <i class="fa-solid fa-bag-shopping"></i>
-    <i id="menuIcon" class="fa-solid fa-bars menuIcon"></i>
-  </div>
-</nav>
+        <div class="search-bar">
+          <input type="text" placeholder="Search products, brands & categories..." />
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
 
-      <!-- main page -->
-      <div class="main">
-        <img src="images/main.png" alt="" />
-        <div class="mainText">
-          <h1>Wear and Trends</h1>
-          <p>
-            Wear and Trends explores evolving fashion styles, highlighting how
-            clothing choices reflect culture, innovation, and seasonal
-            influences shaping modern personal expression.
-          </p>
-          <button>Explore</button>
+        <div class="nav-icons">
+          <a href="#" class="icon-btn" title="Account">
+            <i class="fa-regular fa-user"></i>
+          </a>
+          <a href="#" class="icon-btn cart-btn" title="Shopping Bag">
+            <i class="fa-solid fa-bag-shopping"></i>
+            <span class="cart-badge" id="cartCount">0</span>
+          </a>
+          <button class="menu-icon" id="menuBtn" aria-label="Toggle Navigation">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Main Hero Section -->
+    <main>
+      <section class="hero">
+        <div class="hero-container container">
+          <div class="hero-content">
+            <span class="badge">New Season Arrival</span>
+            <h1>Wear Your Trends With Confidence</h1>
+            <p>
+              Discover the latest fashion styles tailored for personal expression,
+              premium quality fabrics, and modern aesthetics.
+            </p>
+            <div class="hero-btns">
+              <a href="#trends" class="btn btn-primary">Explore Collection</a>
+              <a href="#women" class="btn btn-secondary">Shop Women</a>
+            </div>
+          </div>
+          <div class="hero-image">
+            <img src="images/main.png" alt="Fashion Trends Banner" />
+          </div>
+        </div>
+      </section>
+
+      <section id="men" class="section container">
+        <div class="section-head">
+          <h2>Men's Collection</h2>
+          <p>Handpicked contemporary designs for men</p>
+        </div>
+        <div class="product-grid">
+          <div class="card" data-title="Classic Urban Jacket" data-price="79.99">
+            <div class="card-img-wrapper">
+              <span class="tag">30% OFF</span>
+              <img src="images/men1.webp" alt="Men Trending Wear 1" />
+              <button class="quick-view-btn">Quick View</button>
+            </div>
+            <div class="card-info">
+              <span class="category">Men's Outerwear</span>
+              <h3>Classic Urban Jacket</h3>
+              <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <span>(4.8)</span>
+              </div>
+              <div class="card-bottom">
+                <div class="price">$79.99 <span class="old-price">$115.00</span></div>
+                <button class="add-cart-btn"><i class="fa-solid fa-cart-plus"></i></button>
+              </div>
+            </div>
+          </div>
+
+          <div class="card" data-title="Slim Fit Cotton Shirt" data-price="49.99">
+            <div class="card-img-wrapper">
+              <span class="tag">HOT</span>
+              <img src="images/men2.webp" alt="Men Trending Wear 2" />
+              <button class="quick-view-btn">Quick View</button>
+            </div>
+            <div class="card-info">
+              <span class="category">Men's Shirts</span>
+              <h3>Slim Fit Cotton Shirt</h3>
+              <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <span>(5.0)</span>
+              </div>
+              <div class="card-bottom">
+                <div class="price">$49.99 <span class="old-price">$69.99</span></div>
+                <button class="add-cart-btn"><i class="fa-solid fa-cart-plus"></i></button>
+              </div>
+            </div>
+          </div>
+
+          <div class="card" data-title="Streetwear Casual Hoodie" data-price="59.99">
+            <div class="card-img-wrapper">
+              <span class="tag">30% OFF</span>
+              <img src="images/men3.webp" alt="Men Trending Wear 3" />
+              <button class="quick-view-btn">Quick View</button>
+            </div>
+            <div class="card-info">
+              <span class="category">Men's Hoodies</span>
+              <h3>Streetwear Casual Hoodie</h3>
+              <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+                <span>(4.6)</span>
+              </div>
+              <div class="card-bottom">
+                <div class="price">$59.99 <span class="old-price">$85.00</span></div>
+                <button class="add-cart-btn"><i class="fa-solid fa-cart-plus"></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="women" class="section container">
+        <div class="section-head">
+          <h2>Women's Collection</h2>
+          <p>Elegance meets everyday comfort</p>
+        </div>
+        <div class="product-grid">
+          <div class="card" data-title="Floral Summer Dress" data-price="64.99">
+            <div class="card-img-wrapper">
+              <span class="tag">NEW</span>
+              <img src="images/wom1.webp" alt="Women Wear 1" />
+              <button class="quick-view-btn">Quick View</button>
+            </div>
+            <div class="card-info">
+              <span class="category">Dresses</span>
+              <h3>Floral Summer Dress</h3>
+              <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <span>(4.9)</span>
+              </div>
+              <div class="card-bottom">
+                <div class="price">$64.99 <span class="old-price">$89.99</span></div>
+                <button class="add-cart-btn"><i class="fa-solid fa-cart-plus"></i></button>
+              </div>
+            </div>
+          </div>
+
+          <div class="card" data-title="Elegant Silk Blouse" data-price="54.99">
+            <div class="card-img-wrapper">
+              <span class="tag">30% OFF</span>
+              <img src="images/wom2.webp" alt="Women Wear 2" />
+              <button class="quick-view-btn">Quick View</button>
+            </div>
+            <div class="card-info">
+              <span class="category">Tops & Blouses</span>
+              <h3>Elegant Silk Blouse</h3>
+              <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <span>(4.5)</span>
+              </div>
+              <div class="card-bottom">
+                <div class="price">$54.99 <span class="old-price">$78.00</span></div>
+                <button class="add-cart-btn"><i class="fa-solid fa-cart-plus"></i></button>
+              </div>
+            </div>
+          </div>
+
+          <div class="card" data-title="Casual Oversized Blazer" data-price="89.99">
+            <div class="card-img-wrapper">
+              <span class="tag">TRENDING</span>
+              <img src="images/wom3.webp" alt="Women Wear 3" />
+              <button class="quick-view-btn">Quick View</button>
+            </div>
+            <div class="card-info">
+              <span class="category">Blazers</span>
+              <h3>Casual Oversized Blazer</h3>
+              <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <span>(5.0)</span>
+              </div>
+              <div class="card-bottom">
+                <div class="price">$89.99 <span class="old-price">$120.00</span></div>
+                <button class="add-cart-btn"><i class="fa-solid fa-cart-plus"></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="trends" class="section slider-section">
+        <div class="container">
+          <div class="section-head light-text">
+            <h2>Limited Stocks & Trends</h2>
+            <p>Hurry up! Grab top-rated items before they are sold out</p>
+          </div>
+          <div class="slider-wrapper">
+            <button class="slide-btn prev-btn" id="prevSlide"><i class="fa-solid fa-chevron-left"></i></button>
+            <div class="slider-track" id="sliderTrack">
+              <div class="slide-card">
+                <img src="images/wom1.webp" alt="Limited Trend 1" />
+                <div class="slide-overlay">
+                  <h4>Summer Special</h4>
+                  <a href="#women" class="btn btn-sm">Shop Now</a>
+                </div>
+              </div>
+              <div class="slide-card">
+                <img src="images/men1.webp" alt="Limited Trend 2" />
+                <div class="slide-overlay">
+                  <h4>Winter Outfits</h4>
+                  <a href="#men" class="btn btn-sm">Shop Now</a>
+                </div>
+              </div>
+              <div class="slide-card">
+                <img src="images/wom2.webp" alt="Limited Trend 3" />
+                <div class="slide-overlay">
+                  <h4>Chic Collections</h4>
+                  <a href="#women" class="btn btn-sm">Shop Now</a>
+                </div>
+              </div>
+              <div class="slide-card">
+                <img src="images/men2.webp" alt="Limited Trend 4" />
+                <div class="slide-overlay">
+                  <h4>Casual Classics</h4>
+                  <a href="#men" class="btn btn-sm">Shop Now</a>
+                </div>
+              </div>
+            </div>
+            <button class="slide-btn next-btn" id="nextSlide"><i class="fa-solid fa-chevron-right"></i></button>
+          </div>
+        </div>
+      </section>
+
+      <section id="blogs" class="section container">
+        <div class="section-head">
+          <h2>Latest Fashion Blogs</h2>
+          <p>Read our insights on current fashion movements and style guides</p>
+        </div>
+        <div class="blog-grid">
+          <article class="blog-card">
+            <div class="blog-img">
+              <img src="images/wom1.webp" alt="Blog 1" />
+              <span class="blog-date">Oct 12, 2026</span>
+            </div>
+            <div class="blog-content">
+              <h3>10 Essential Wardrobe Staples for Every Woman</h3>
+              <p>Learn how to build a minimalist yet highly stylish capsule wardrobe effortlessly.</p>
+              <a href="#" class="read-more">Read Full Story <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </article>
+
+          <article class="blog-card">
+            <div class="blog-img">
+              <img src="images/men1.webp" alt="Blog 2" />
+              <span class="blog-date">Oct 18, 2026</span>
+            </div>
+            <div class="blog-content">
+              <h3>Men's Streetwear Fashion Guide for 2026</h3>
+              <p>Explore layering, oversized silhouettes, and the top sneakers dominating fashion week.</p>
+              <a href="#" class="read-more">Read Full Story <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <div class="modal-overlay" id="productModal">
+      <div class="modal-box">
+        <button class="modal-close" id="closeModal">&times;</button>
+        <div class="modal-body">
+          <div class="modal-img">
+            <img id="modalImage" src="" alt="Product Image" />
+          </div>
+          <div class="modal-details">
+            <span class="badge" id="modalCategory">Featured</span>
+            <h2 id="modalTitle">Product Name</h2>
+            <div class="rating">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p class="modal-price" id="modalPrice">$0.00</p>
+            <p class="modal-desc">
+              Experience unbeatable comfort and trendsetting aesthetics with our premium apparel collection, engineered for durability and style.
+            </p>
+            <div class="modal-actions">
+              <button class="btn btn-primary" id="modalBuyNow">Buy Now</button>
+              <button class="btn btn-secondary" id="modalAddToCart">Add To Cart</button>
+            </div>
+          </div>
         </div>
       </div>
-
-      <!-- men section -->
-      <div id="men">
-        <div class="head">
-          <h1>Men's Wear</h1>
-        </div>
-        <div class="mens">
-          <div class="card">
-            <img src="images/men1.webp" alt="" />
-            <p>Trending Wear</p>
-            <p>Upto 30% OFF</p>
-          </div>
-          <div class="card">
-            <img src="images/men2.webp" alt="" />
-            <p>Trending Wear</p>
-            <p>Upto 30% OFF</p>
-          </div>
-          <div class="card">
-            <img src="images/men3.webp" alt="" />
-            <p>Trending Wear</p>
-            <p>Upto 30% OFF</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Women section -->
-      <div id="women">
-        <div class="head">
-          <h1>Women's Wear</h1>
-        </div>
-        <div class="womens">
-          <div class="card">
-            <img src="images/wom1.webp" alt="" />
-            <p>Trending Wear</p>
-            <p>Upto 30% OFF</p>
-          </div>
-          <div class="card">
-            <img src="images/wom2.webp" alt="" />
-            <p>Trending Wear</p>
-            <p>Upto 30% OFF</p>
-          </div>
-          <div class="card">
-            <img src="images/wom3.webp" alt="" />
-            <p>Trending Wear</p>
-            <p>Upto 30% OFF</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Trends section -->
-      <div id="trends">
-        <div class="head">
-          <h1>Limmited Stocks</h1>
-        </div>
-        <div class="slide">
-          <div class="slideCard">
-            <img src="images/wom1.webp" alt="" />
-            <img src="images/wom2.webp" alt="" />
-            <img src="images/wom3.webp" alt="" />
-          </div>
-          <div class="slideCard">
-            <img src="images/men1.webp" alt="" />
-            <img src="images/men2.webp" alt="" />
-            <img src="images/men3.webp" alt="" />
-          </div>
-          <div class="slideCard">
-            <img src="images/wom1.webp" alt="" />
-            <img src="images/men1.webp" alt="" />
-            <img src="images/wom3.webp" alt="" />
-          </div>
-          <div class="slideCard">
-            <img src="images/men1.webp" alt="" />
-            <img src="images/wom3.webp" alt="" />
-            <img src="images/men3.webp" alt="" />
-          </div>
-        </div>
-      </div>
-
-      <!-- Blogs section -->
-      <div id="blogs">
-        <div class="head">
-          <h1>Read Blogs</h1>
-        </div>
-        <div class="blogs">
-          <div class="blogCard">
-            <img src="images/wom1.webp" alt="" />
-            <h3>Read Trends Cloths Blogs</h3>
-            <a
-              href="https://newbreak.church/blog/?gad_source=1&gad_campaignid=19684169413&gbraid=0AAAAACMeKDLHJAhSikl5ZfcqF6Nu7TsbU&gclid=CjwKCAjw04HIBhB8EiwA8jGNbbMfbyOP3Fveb4hFQAssovdoVHSEIwmSiqOraC4Jh_Jv6wen497FcBoCOTsQAvD_BwE"
-              >Read</a
-            >
-          </div>
-
-          <div class="blogCard">
-            <img src="images/men1.webp" alt="" />
-            <h3>Read Trends Cloths Blogs</h3>
-            <a
-              href="https://newbreak.church/blog/?gad_source=1&gad_campaignid=19684169413&gbraid=0AAAAACMeKDLHJAhSikl5ZfcqF6Nu7TsbU&gclid=CjwKCAjw04HIBhB8EiwA8jGNbbMfbyOP3Fveb4hFQAssovdoVHSEIwmSiqOraC4Jh_Jv6wen497FcBoCOTsQAvD_BwE"
-              >Read</a
-            >
-          </div>
-        </div>
-      </div>
-
-      <!-- footer section -->
-      <footer>
-        <div class="text">
-          <h2>About Us</h2>
-          <p>trending Clocth</p>
-          <p>Invention</p>
-          <p>Wear Trend</p>
-          <p>Search</p>
-        </div>
-        <div class="text">
-          <h2>Men</h2>
-          <p>Quality</p>
-          <p>Good Fabric</p>
-          <p>Best Ever</p>
-          <p>Affordable</p>
-        </div>
-        <div class="text">
-          <h2>Women</h2>
-          <p>Quality</p>
-          <p>Good Fabric</p>
-          <p>Best Ever</p>
-          <p>Affordable</p>
-        </div>
-        <div class="text">
-          <h2>Connect Us</h2>
-          <p>Instagram</p>
-          <p>Facebook</p>
-          <p>Twitter</p>
-          <p>YouTube</p>
-        </div>
-      </footer>
     </div>
 
-    <!-- card details -->
-    <div class="hideCard">
-      <div class="cardDetails">
-        <img src="images/wom1.webp" alt="" />
-        <div class="cardText">
-          <h2>Top Trending Wear</h2>
-          <h2>Upto 30% off Harry...</h2>
-          <p>Lorem ipsum dolor sit amet...</p>
-          <p>Lorem ipsum dolor sit amet...</p>
-          <p>Lorem ipsum dolor sit amet...</p>
-          <p>Lorem ipsum dolor sit amet...</p>
-          <button>Buy Now</button>
-          <button>Add To Cart</button>
-          <a href="#" class="backBtn">Back</a>
+    <footer>
+      <div class="footer-container container">
+        <div class="footer-col brand-col">
+          <a href="#" class="logo light">
+            <span>TrendVerse</span>
+          </a>
+          <p>Your one-stop destination for modern trends, premium quality apparel, and affordable luxury styling.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#men">Men's Store</a></li>
+            <li><a href="#women">Women's Store</a></li>
+            <li><a href="#trends">Special Deals</a></li>
+            <li><a href="#blogs">Fashion Blog</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Customer Care</h4>
+          <ul>
+            <li><a href="#">Order Tracking</a></li>
+            <li><a href="#">Shipping & Returns</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Follow Us</h4>
+          <div class="social-links">
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+          </div>
         </div>
       </div>
-    </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 TrendVerse Wear & Trends. All Rights Reserved.</p>
+      </div>
+    </footer>
 
     <script src="script.js"></script>
   </body>

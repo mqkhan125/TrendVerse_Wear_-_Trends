@@ -1,54 +1,80 @@
-let slide = document.querySelectorAll(".slideCard");
-let cards = document.querySelectorAll(".card");
-let hideCard = document.querySelector(".hideCard");
-let cardDetails = document.querySelector(".cardDetails");
+document.addEventListener("DOMContentLoaded", () => {
+  const menuBtn = document.getElementById("menuBtn");
+  const navLinks = document.getElementById("navLinks");
 
-let count = 0;
-slide.forEach((slides, index) => {
-  slides.style.left = `${index * 100}%`;
-});
-
-function moveToSlide() {
-  slide.forEach((currCard) => {
-    currCard.style.transform = `translateX(-${count * 100}%)`;
-  });
-}
-
-setInterval(() => {
-  count++;
-  if (count == slide.length) {
-    count = 0;
+  if (menuBtn && navLinks) {
+    menuBtn.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+    });
   }
 
-  moveToSlide();
-}, 2000);
+  let cartCount = 0;
+  const cartBadge = document.getElementById("cartCount");
+  const addCartBtns = document.querySelectorAll(".add-cart-btn");
 
-// cards details
-cards.forEach((curCard) => {
-  curCard.addEventListener("click", () => {
-    let imgSrc = curCard.querySelector("img").src;
-    document.querySelector(".container").style.display = "none";
-    hideCard.style.display = "block";
-    cardDetails.innerHTML = `
-      <img src="${imgSrc}" alt="" />
-      <div class="cardText">
-        <h2>Top Trending Wear</h2>
-        <h2>Upto 30% off Harry...</h2>
-        <p>Lorem ipsum dolor sit amet...</p>
-        <p>Lorem ipsum dolor sit amet...</p>
-        <p>Lorem ipsum dolor sit amet...</p>
-        <p>Lorem ipsum dolor sit amet...</p>
-        <button>Buy Now</button>
-        <button>Add To Cart</button>
-        <a href="#" class="backBtn">Back</a>
-      </div>
-    `;
+  addCartBtns.forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      cartCount++;
+      cartBadge.textContent = cartCount;
 
-    const backBtn = cardDetails.querySelector(".backBtn");
-    backBtn.addEventListener("click", (e) => {
-      e.preventDefault();
-      hideCard.style.display = "none";
-      document.querySelector(".container").style.display = "block";
+      btn.style.backgroundColor = "var(--primary)";
+      btn.style.color = "var(--white)";
+      setTimeout(() => {
+        btn.style.backgroundColor = "";
+        btn.style.color = "";
+      }, 500);
     });
   });
+
+  const modal = document.getElementById("productModal");
+  const closeModalBtn = document.getElementById("closeModal");
+  const quickViewBtns = document.querySelectorAll(".quick-view-btn");
+
+  const modalImage = document.getElementById("modalImage");
+  const modalTitle = document.getElementById("modalTitle");
+  const modalPrice = document.getElementById("modalPrice");
+
+  quickViewBtns.forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      const card = e.target.closest(".card");
+      if (!card) return;
+
+      const title = card.dataset.title || "Product Item";
+      const price = card.dataset.price ? `$${card.dataset.price}` : "$49.99";
+      const imgSrc = card.querySelector("img").src;
+
+      modalTitle.textContent = title;
+      modalPrice.textContent = price;
+      modalImage.src = imgSrc;
+
+      modal.classList.add("active");
+    });
+  });
+
+  const closeModal = () => {
+    modal.classList.remove("active");
+  };
+
+  if (closeModalBtn) closeModalBtn.addEventListener("click", closeModal);
+  if (modal) {
+    modal.addEventListener("click", (e) => {
+      if (e.target === modal) closeModal();
+    });
+  }
+
+  // 4. Horizontal Slider Navigation
+  const sliderTrack = document.getElementById("sliderTrack");
+  const prevSlide = document.getElementById("prevSlide");
+  const nextSlide = document.getElementById("nextSlide");
+
+  if (sliderTrack && prevSlide && nextSlide) {
+    prevSlide.addEventListener("click", () => {
+      sliderTrack.scrollBy({ left: -300, behavior: "smooth" });
+    });
+
+    nextSlide.addEventListener("click", () => {
+      sliderTrack.scrollBy({ left: 300, behavior: "smooth" });
+    });
+  }
 });
